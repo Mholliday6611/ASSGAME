@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html ng-app="gameApp">
+	<head>
+
+		<title>Forum</title>
+		<link rel="stylesheet" type="text/css" href="C:\Users\Ripmm\Desktop\ASSGAME\css\bootstrap.min.css">
+
+		<style type="text/css">
+			
+			body {
+				background-color:#2d2d2d;
+				color:white;
+			}
+
+			.jumbotron {
+				background-image:url('space-earth.jpg');
+				height:15em;
+				background-repeat:no-repeat;
+				background-position:center;
+				background-size:100%;
+				text-align:center;
+			}
+
+			#table {
+				width:1150px;
+				height:200px;
+				line-height:3em;
+				overflow:auto;
+				padding:5px;
+			}
+
+			table {
+				background-color:grey;
+				color:black;
+				border-radius:15px;
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<nav class="navbar navbar-inverse">
+		  <div class="container">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="index.html">A Special Shooter</a>
+		    </div>
+		    <ul class="nav navbar-nav">
+		      <li class="active.html"><a href="account.html">My Account</a></li>
+		      <li><a href="fourms.html">Forums</a></li>
+		      <li><a href="about.html">About</a></li>
+		    </ul>
+		  </div>
+		</nav>
+
+		<div class="jumbotron">
+		  <h1>Forums Page</h1>
+		  <p>Here is a forum page where you guys drop down any questions for the rest of other users to answer!</p>
+		</div>
+
+		<div class="container" id="table" ng-if="no-post">
+			<ng-view></ng-view>
+		</div>
+		<div class="container">
+			<form>
+				<div class="row">
+					<div class="col-md-6">
+					  <div class="form-group">
+					  	<h2>Create Post</h2>
+					    <label for="topic">Topic</label>
+					    <input type="text" class="form-control" id="topic">
+					    <label for="question">Question</label>
+					    <textarea id="question" class="form-control" rows="6"></textarea>
+					  </div>
+				  	</div>
+				  	<div class="col-md-6">
+					  <div class="form-group">
+					  	<h2>Search Box</h2>
+					    <label for="search">Search:</label>
+					    <input type="text" class="form-control" id="search">
+					  </div>
+					  <button type="submit" class="btn btn-default">Submit</button>
+				  	</div>
+				  </div>
+			</form>
+		</div>
+
+		<script src="https://cdnjs.cloudfire.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+		<script src="https://cdnjs.cloudfire.com/ajax/libs/angular.js/1.6.1/angular-route.js"></script>
+		<script src="C:\Users\Ripmm\Desktop\ASSGAME\tempApp.js"></script>
+	</body>
+
+</html>
