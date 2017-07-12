@@ -1,9 +1,10 @@
 angular.module("gameApp", ["ngRoute"])
 	.config(function($routeProvider){
-		.when("/forum", {
-			templateUrl: "public/directory.html"
+		$routeProvider
+		.when("/", {
+			templateUrl: "directory.html"
 		})
 		.when("/forum-post", {
-			templateUrl: "public/forum-post.html"
+			templateUrl: "forum-post.html"
 		})
-	});
+	})
