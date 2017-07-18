@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Mholliday6611/ASSGAME#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "mongojs": "^2.4.0"
   }
 }
