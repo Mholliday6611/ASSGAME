@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Create Your Account</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script src="../controllers/tempApp.js"></script>
+
+		<style type="text/css">
+			
+			body {
+				background-color:#171A21;
+				color:white;
+			}
+
+			a {
+				color:white;
+			}
+
+			nav {
+				background-color:#283042;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<nav class="navbar">
+		  <div class="container">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="index.html">A Special Shooter</a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="myNavbar">
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="#">My Account</a></li>
+		        <li><a href="#">Forums</a></li>
+		        <li><a href="#">About</a></li>
+		      </ul>
+		    </div>
+		  </div>
+		</nav>
+
+		<div class="container">
+			<h1>Create Account</h1>
+			<form>
+			  <div class="form-group">
+			    <label for="name">Name:</label>
+			    <input type="text" class="form-control" id="name">
+			  </div>
+			  <div class="form-group">
+			    <label for="username">Username:</label>
+			    <input type="text" class="form-control" id="username">
+			  </div>
+			  <div class="form-group">
+			    <label for="email">Email:</label>
+			    <input type="email" class="form-control" id="email">
+			  </div>
+			  <div class="form-group">
+			    <label for="pwd">Password:</label>
+			    <input type="password" class="form-control" id="pwd">
+			  </div>
+			  <div class="form-group">
+			    <label for="com-pwd">Confirm Password:</label>
+			    <input type="password" class="form-control" id="com-pwd">
+			  </div>
+  			  <button type="submit" style="position:relative; left:36.7em;" class="btn btn-default">Submit</button>
+			</form>
+		</div>
+	</body>
+</html>

@@ -9,18 +9,29 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-		<script src="../angular-route.js"></script>
-		<script src="../controllers/tempApp.js"></script>
+		<script src="angular-route.js"></script>
+		<script src="controllers/tempApp.js"></script>
 
 		<style type="text/css">
 
 			
 			body {
+				background-color:#171A21;
+				color:white;
+			}
 
+			a {
+				color:white;
+			}
+
+			nav {
+				background-color:#283042;
 			}
 
 			.jumbotron {
-				background-image:url('../space-earth.jpg');
+				position:relative;
+				bottom:20px;
+				background-image:url('space-earth.jpg');
 				height:15em;
 				background-repeat:no-repeat;
 				background-position:center;
@@ -46,8 +57,8 @@
 		    <div class="navbar-header">
 		      <a class="navbar-brand" href="index.html">A Special Shooter</a>
 		    </div>
-		    <ul class="nav navbar-nav">
-		      <li class="active.html"><a href="account.html">My Account</a></li>
+		    <ul class="nav navbar-nav navbar-right">
+		      <li><a href="createPage.html">My Account</a></li>
 		      <li><a href="fourms.html">Forums</a></li>
 		      <li><a href="about.html">About</a></li>
 		    </ul>
@@ -59,8 +70,30 @@
 		  <p>Here is a forum page where you guys drop down any questions for the rest of other users to answer!</p>
 		</div>
 
-		<div ng-view></div>
-		<div class="container"  ng-controller="gameCtrl">
+		<div class="container" ng-controller="gameCtrl">
+			<div class="container">
+			<h1>Forums</h1>
+
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Thread</th>
+						<th>Author</th>
+						<th>Date</th>
+						<th>&nbsp;</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="list in questionList">
+						<td>{{list.question}}</td>
+						<td>{{list.author}}</td>
+						<td>{{list.date}}</td>
+					</tr>
+				</tbody>
+			</table>
+			</div>
+
+		<div class="container">
 			<form>
 				<div class="row">
 					<div class="col-md-6">
@@ -83,6 +116,7 @@
 				  	</div>
 				  </div>
 			</form>
+		</div>
 		</div>
 	</body>
 

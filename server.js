@@ -8,7 +8,9 @@ app.use(bodyParser.json());
 
 app.post("/questionList", function(req, res){
 	console.log(req.body);
-
+	db.questionList.insert(req.body, function(err, doc){
+		res.json(doc);
+	})
 });
 
 app.listen(1000);
